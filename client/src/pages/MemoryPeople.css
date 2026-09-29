@@ -1,0 +1,258 @@
+.memory-people-page {
+  min-height: 100vh;
+  background: #f4f9fd;
+  padding: 45px 70px;
+}
+
+
+/* ================= HEADER ================= */
+
+.memory-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.memory-tagline {
+  color: #1685d8;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.memory-page-header h1 {
+  color: #123f63;
+  font-size: 38px;
+  margin: 0 0 10px;
+}
+
+.memory-page-header p {
+  color: #607d94;
+  font-size: 16px;
+}
+
+.memory-header-icon {
+  width: 70px;
+  height: 70px;
+  background: white;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 35px;
+  box-shadow: 0 5px 20px rgba(0, 80, 140, 0.08);
+}
+
+
+/* ================= MAIN CONTENT ================= */
+
+.memory-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+
+/* ================= FORM CARD ================= */
+
+.person-form-card,
+.people-list-card {
+  background: white;
+  padding: 35px;
+  border-radius: 18px;
+  box-shadow: 0 5px 25px rgba(0, 80, 140, 0.08);
+}
+
+.person-form-card h2,
+.people-list-card h2 {
+  color: #123f63;
+  font-size: 25px;
+  margin: 0 0 8px;
+}
+
+.form-description {
+  color: #71889a;
+  margin-bottom: 30px;
+}
+
+
+/* ================= FORM ================= */
+
+.person-form-card .form-group {
+  margin-bottom: 20px;
+}
+
+.person-form-card label {
+  display: block;
+  color: #164d75;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.person-form-card input,
+.person-form-card select,
+.person-form-card textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 15px;
+  border: 1px solid #d8e7f1;
+  border-radius: 9px;
+  font-size: 15px;
+  color: #123f63;
+  background: #fbfdff;
+  outline: none;
+  transition: 0.3s;
+  font-family: inherit;
+}
+
+.person-form-card input:focus,
+.person-form-card select:focus,
+.person-form-card textarea:focus {
+  border-color: #1685d8;
+  box-shadow: 0 0 0 3px rgba(22, 133, 216, 0.1);
+}
+
+.person-form-card textarea {
+  resize: vertical;
+}
+
+
+/* ================= ADD BUTTON ================= */
+
+.add-person-btn {
+  width: 100%;
+  padding: 14px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 9px;
+  background: #1685d8;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-person-btn:hover {
+  background: #0d6fb8;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(22, 133, 216, 0.25);
+}
+
+
+/* ================= EMPTY STATE ================= */
+
+.empty-people {
+  text-align: center;
+  padding: 60px 20px;
+  border: 1px dashed #cddfe9;
+  border-radius: 12px;
+}
+
+.empty-people > div {
+  font-size: 45px;
+  margin-bottom: 10px;
+}
+
+.empty-people h3 {
+  color: #164d75;
+  margin: 0 0 8px;
+}
+
+.empty-people p {
+  color: #71889a;
+  margin: 0;
+}
+
+
+/* ================= PEOPLE LIST ================= */
+
+.people-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.person-card {
+  display: flex;
+  gap: 15px;
+  padding: 18px;
+  border: 1px solid #e0edf5;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.person-card:hover {
+  border-color: #1685d8;
+  transform: translateY(-2px);
+}
+
+.person-icon {
+  width: 48px;
+  height: 48px;
+  background: #edf7fd;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.person-details h3 {
+  color: #164d75;
+  margin: 0 0 5px;
+}
+
+.person-details p {
+  color: #71889a;
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+  .memory-people-page {
+    padding: 30px;
+  }
+
+  .memory-content {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .memory-people-page {
+    padding: 20px;
+  }
+
+  .memory-page-header {
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .memory-page-header h1 {
+    font-size: 30px;
+  }
+
+  .memory-header-icon {
+    width: 55px;
+    height: 55px;
+    font-size: 28px;
+  }
+
+  .person-form-card,
+  .people-list-card {
+    padding: 25px;
+  }
+
+}

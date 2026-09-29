@@ -1,0 +1,162 @@
+.patient-profile-page {
+  min-height: 100vh;
+  background: #f4f9fd;
+  padding: 45px 70px;
+}
+
+
+/* ================= HEADER ================= */
+
+.profile-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.profile-tagline {
+  color: #1685d8;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.profile-page-header h1 {
+  color: #123f63;
+  font-size: 38px;
+  margin: 0 0 10px;
+}
+
+.profile-page-header p {
+  color: #607d94;
+  font-size: 16px;
+}
+
+.profile-header-icon {
+  width: 70px;
+  height: 70px;
+  background: white;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 35px;
+  box-shadow: 0 5px 20px rgba(0, 80, 140, 0.08);
+}
+
+
+/* ================= FORM CARD ================= */
+
+.profile-form-card {
+  background: white;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 18px;
+  box-shadow: 0 5px 25px rgba(0, 80, 140, 0.08);
+}
+
+.profile-form-card h2 {
+  color: #123f63;
+  font-size: 26px;
+  margin: 0 0 8px;
+}
+
+.form-description {
+  color: #71889a;
+  margin-bottom: 30px;
+}
+
+
+/* ================= FORM ================= */
+
+.profile-form-card .form-group {
+  margin-bottom: 22px;
+}
+
+.profile-form-card label {
+  display: block;
+  color: #164d75;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.profile-form-card input,
+.profile-form-card textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 15px;
+  border: 1px solid #d8e7f1;
+  border-radius: 9px;
+  font-size: 15px;
+  color: #123f63;
+  background: #fbfdff;
+  outline: none;
+  transition: 0.3s;
+  font-family: inherit;
+}
+
+.profile-form-card input:focus,
+.profile-form-card textarea:focus {
+  border-color: #1685d8;
+  box-shadow: 0 0 0 3px rgba(22, 133, 216, 0.1);
+}
+
+.profile-form-card textarea {
+  resize: vertical;
+}
+
+
+/* ================= SAVE BUTTON ================= */
+
+.save-profile-btn {
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 9px;
+  background: #1685d8;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.save-profile-btn:hover {
+  background: #0d6fb8;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(22, 133, 216, 0.25);
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+  .patient-profile-page {
+    padding: 30px 20px;
+  }
+
+  .profile-page-header {
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .profile-page-header h1 {
+    font-size: 30px;
+  }
+
+  .profile-header-icon {
+    width: 55px;
+    height: 55px;
+    font-size: 28px;
+  }
+
+  .profile-form-card {
+    padding: 25px;
+  }
+
+}
