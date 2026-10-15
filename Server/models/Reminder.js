@@ -34,6 +34,11 @@ const reminderSchema = new mongoose.Schema(
       ref: "Patient",
       required: true,
     },
+
+    notificationSent: {
+      type: Boolean,
+      default: false,
+    },
   },
   {
     timestamps: true,

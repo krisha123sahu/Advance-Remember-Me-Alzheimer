@@ -1,6 +1,8 @@
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
+const pushRoutes = require("./routes/pushRoutes");
+const startReminderScheduler = require("./reminderScheduler");
 
 require("dotenv").config();
 
@@ -39,6 +41,7 @@ app.use("/api/patients", patientRoutes);
 app.use("/api/persons", personRoutes);
 app.use("/api/face", faceRoutes);
 app.use("/api/reminders", reminderRoutes);
+app.use("/api/push", pushRoutes);
 app.use("/api/ai", aiRoutes);
 
 // Test route
@@ -50,5 +53,8 @@ app.get("/", (req, res) => {
 app.listen(PORT, () => {
   console.log(
     `Server running on http://localhost:${PORT}`
+
   );
 });
+
+startReminderScheduler();

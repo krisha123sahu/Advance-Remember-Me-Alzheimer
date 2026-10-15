@@ -249,3 +249,136 @@
   }
 
 }
+
+
+/* Care Notifications Card */
+.notification-setup {
+  background: #ffffff;
+  border: 1px solid #e3edf8;
+  border-radius: 18px;
+  padding: 24px;
+  margin: 24px 0;
+  box-shadow: 0 8px 28px rgba(25, 75, 120, 0.08);
+}
+
+.notification-heading {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.notification-icon {
+  width: 54px;
+  height: 54px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #edf5ff;
+  border-radius: 15px;
+  font-size: 28px;
+}
+
+.notification-heading h2 {
+  color: #164b75;
+  font-size: 23px;
+  margin: 0 0 6px;
+}
+
+.notification-heading p {
+  color: #64809a;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.notification-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.notification-btn {
+  border-radius: 9px;
+  padding: 11px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.notification-btn.primary {
+  background: #1686df;
+  color: #ffffff;
+  border: 1px solid #1686df;
+}
+
+.notification-btn.primary:hover {
+  background: #086fc0;
+}
+
+.notification-btn.secondary {
+  background: #ffffff;
+  color: #1675bd;
+  border: 1px solid #b9d8f4;
+}
+
+.notification-btn.secondary:hover {
+  background: #edf6ff;
+}
+
+.notification-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.notification-message {
+  margin: 16px 0 0;
+  color: #24764b;
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .notification-setup {
+    padding: 18px;
+  }
+
+  .notification-actions {
+    flex-direction: column;
+  }
+
+  .notification-btn {
+    width: 100%;
+  }
+}
+
+/* Care Notifications Card Hover */
+.notification-setup {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.notification-setup:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 35px rgba(25, 75, 120, 0.14);
+}
+
+/* Shield Icon Hover */
+.notification-icon {
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.notification-setup:hover .notification-icon {
+  transform: scale(1.08);
+  background: #dcecff;
+}
+
+/* Button Hover */
+.notification-btn {
+  transition: background 0.2s ease, transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.notification-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(22, 117, 189, 0.15);
+}
